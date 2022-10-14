@@ -83,8 +83,6 @@ def ip_track():
     url = f"https://ipapi.co/{ip}/json/"
     rb = requests.get(url)
     pprint.pprint(rb.json())
-    os.system("clear")
-    return menu()
 
 def my_ip():
     os.system("clear")
@@ -92,8 +90,6 @@ def my_ip():
     url = f"https://ipapi.co/{ip}/json/"
     r = requests.get(url)
     pprint.pprint(r.json())
-    os.system("clear")
-    return menu()
 
 
 def menu():
