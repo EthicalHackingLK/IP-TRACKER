@@ -15,15 +15,14 @@ W   = '\033[37m'
 E   = '\033[39m'
 
 def my_ip():
-    os.system("clear")
-    ip = requests.get('https://www.wikipedia.org').headers['X-Client-IP']
+    ip = ''
     url = f"https://ipapi.co/{ip}/json/"
     r = requests.get(url)
     pprint.pprint(r.json())
     exit
 
 def ip_track():
-    os.system("clear")
+    pp = 5
     ip = input(Y+"Enter target ip >>"+E)
     url = f"https://ipapi.co/{ip}/json/"
     rb = requests.get(url)
@@ -93,15 +92,12 @@ def auther():
     Write.Print(auther_note,Colors.red_to_yellow)
     return menu
 
-
-
-
 def menu():
     Write.Print(make,Colors.red_to_yellow,interval=0.005)
     print('')
     Write.Print(menu_note,Colors.red_to_purple,interval=0.005)
     lk=input(G+"\nIP-TRACKER"+E+" >>")
-    if(lk==1 or '01'):
+    if(lk==1):
         ip_track() 
     elif(lk==2 or '02'):
         my_ip()
